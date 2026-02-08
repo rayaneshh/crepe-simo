@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRÊPE SIMO 48 | Délices à Oujda</title>
+    <link rel="icon" type="image/png" href="img_1934.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+           <div class="logo">
+    <img src="crepe.jpg" alt="Logo Crêpe Simo 48" style="height: 50px; width: auto; vertical-align: middle;">
+    <div style="display: inline-block; vertical-align: middle; margin-left: 10px;">
+        <h1 style="font-size: 18px;">CREPE SIMO 48</h1>
+        <p class="tagline">Le goût de la perfection</p>
+    </div>
+</div>
+
+            <nav class="nav">
+                <a href="#home" class="nav-link">Accueil</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <button class="cart-btn" id="cartBtn">
+                <i class="fas fa-shopping-basket cart-icon"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <img src="crepe.jpg" alt="Logo Crêpe Simo 48" alt="Crêpe Simo 48" style="width: 120px; border-radius: 50%; margin-bottom: 20px; box-shadow: var(--shadow-lg);">
+            <h1 class="hero-title">Savourez nos Crêpes & Jus Frais</h1>
+            <p class="hero-description">
+                De la douceur du Nutella à la fraîcheur de nos cocktails, découvrez une expérience gourmande unique à Oujda. Commandez en ligne et recevez votre délice !
+            </p>
+            <a href="#menu" class="btn btn-primary">Voir le Menu</a>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Notre Carte</h2>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="tous">Tous</button>
+                <button class="filter-btn" data-category="crepes-sucrees">Crêpes Sucrées</button>
+                <button class="filter-btn" data-category="crepes-salees">Crêpes Salées</button>
+                <button class="filter-btn" data-category="gaufres">Gaufres</button>
+                <button class="filter-btn" data-category="desserts">Desserts</button>
+                <button class="filter-btn" data-category="boissons">Boissons</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Où nous trouver ?</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Adresse</h3>
+                    <p>Oujda, Oriental, Maroc</p>
+                    <p>Près de l'université</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Horaires</h3>
+                    <p>Lundi - Dimanche</p>
+                    <p>11:00 – 23:30</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Commande Rapide</h3>
+                    <p>Besoin d'aide ?</p>
+                    <a href="https://wa.me/212XXXXXXXXX" class="whatsapp-link" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mon Panier</h3>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems" class="cart-items">
+                    </div>
+                <div id="cartEmpty" class="cart-empty">
+                    <i class="fas fa-shopping-cart" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
+                    Votre panier est vide.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cartTotal">0 DH</span>
+                </div>
+                <button class="btn btn-primary btn-block" id="orderBtn">
+                    Confirmer sur WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content modal-product">
+            <div class="modal-header">
+                <h3 id="modalProductName">Détails du produit</h3>
+                <button class="close-btn" id="closeProduct">&times;</button>
+            </div>
+            <div class="product-modal-content">
+                <img id="modalProductImg" src="" alt="">
+                <div class="product-modal-body">
+                    <div class="price" id="modalProductPrice"></div>
+                    <p class="description" id="modalProductDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-tiktok fa-2x"></i></a>
+            </div>
+            <p>&copy; 2026 CREPE SIMO 48. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

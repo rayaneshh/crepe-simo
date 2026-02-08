@@ -773,7 +773,7 @@ function sendWhatsAppOrder() {
         return;
     }
 
-    const phoneNumber = '212XXXXXXXXX';
+    const phoneNumber = '212669661070';
 
     let message = '🍽️ *Nouvelle Commande - CREPE SIMO 48*\n\n';
 
@@ -860,3 +860,4 @@ style.textContent = `
 document.head.appendChild(style);
 
 document.addEventListener('DOMContentLoaded', initializeApp);
+
